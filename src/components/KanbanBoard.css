@@ -1,0 +1,52 @@
+.kanban-board {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .display-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .display-grouping,
+  .display-ordering {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  select {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+  }
+  

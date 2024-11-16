@@ -1,0 +1,74 @@
+.display-options-container {
+    position: relative;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.7rem;
+    color: #666;
+  }
+  
+  .dropdown-menu {
+    margin: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    display: flex;
+    flex-direction: column; /* Display items in a column (two lines) */
+    gap: 10px; /* Space between Grouping and Ordering */
+    z-index: 1000;
+  }
+  
+  .dropdown-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between label and dropdown */
+  }
+  
+  .dropdown-label {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .dropdown-select {
+    width: 150px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .dropdown-select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .display-button {
+    margin: 10px;
+    /* background: #f5f5f5; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .display-icon {
+    width: 16px;
+    height: 16px;
+    color: #666; /* Icon color */
+  }
+  
+  

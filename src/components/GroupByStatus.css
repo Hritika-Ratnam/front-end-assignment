@@ -1,0 +1,182 @@
+.kanban-content {
+    display: flex; /* Align columns horizontally */
+    gap: 10px; /* Space between columns */
+    padding: 10px 0;
+    width: 100%; /* Ensure it fits the viewport */
+    justify-content: space-between; /* Spread columns evenly */
+  }
+  
+  .column {
+    flex: 1;
+    max-width: 20%; /* Columns take up equal space and fit within the viewport */
+    min-width: 150px; /* Ensure columns don't shrink too small */
+    /* background: #f5f5f5; */
+    padding: 10px;
+    border-radius: 8px;
+    /* border: 1px solid #ddd; */
+    box-sizing: border-box; /* Prevent padding from adding extra width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  .column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto; /* Only allow vertical scrolling if necessary */
+  }
+  
+  
+  
+  .column-header {
+    
+     display: flex;
+    align-items: flex-start;
+    justify-content: space-around; 
+  }
+
+  .column-subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  .column-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ticket-count {
+    margin-left: 5px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .add-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .menu-dots {
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .empty-circle {
+    border: 2px solid #666;
+    border-radius: 50%;
+  }
+  .backlog-circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #666; /* Blue background */
+        position: relative;
+  }
+  
+  .half-filled-circle {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 50%;
+    background: none;
+    overflow: hidden;
+  }
+  
+  .half-filled-circle::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #ffcc00; /* Yellow fill */
+    right: 0; /* Start filling from the right */
+    top: 0;
+  }
+  
+  
+  .filled-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue background */
+    position: relative;
+  }
+  
+  .filled-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-65%, -65%) rotate(45deg);
+  }
+  
+  
+  .cross-circle {
+    border: 2px solid #666;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .cross-circle:before,
+  .cross-circle:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: #666;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .cross-circle:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .empty-column {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

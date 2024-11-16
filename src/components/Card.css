@@ -1,0 +1,187 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%; /* Ensures card takes full column width */
+  max-width: 100%; /* Prevents the card from exceeding the column width */
+  box-sizing: border-box; /* Includes padding and border in width */
+  overflow: hidden; /* Prevents any child from causing overflow */
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-id {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Card Title */
+.card-title h4 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  color: #333;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap; /* Ensures content wraps instead of overflowing */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.small-icon-box {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #616060; /* Dark grey background */
+  border-radius: 4px; /* Slightly rounded corners */
+  color: white; /* White text */
+}
+
+.icon-box {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 4px;
+  color: #3f3f3f;
+  border: 1px solid #ddd;
+}
+
+.exclamation-icon {
+  font-size: 0.8rem; /* Adjust font size for smaller icon */
+  font-weight: bold;
+}
+
+/* Tag */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* background: #f5f5f5; */
+  color: #666;
+  font-size: 0.75rem;
+  padding: 5.6px 8px;
+  border-radius: 4px;
+  border: #f5f5f5 2px solid;
+}
+
+.tag-empty-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #a69e9e;
+  border: #a69e9e;
+}
+
+.tag-text {
+  font-size: 0.75rem; /* Adjust font size */
+  font-weight: normal;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and title */
+}
+
+.card-title-content {
+  display: flex;
+  gap: 8px;
+}
+
+.status-icon {
+  display: flex;
+  justify-content: center;
+}
+
+/* Status Icon Styles (reused from GroupByStatus) */
+.backlog-circle {
+  width: 12px;
+  height: 12px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.empty-circle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #666;
+  border-radius: 50%;
+}
+
+.half-filled-circle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ffcc00;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ffcc00 50%, transparent 50%);
+}
+
+.filled-circle {
+  width: 12px;
+  height: 12px;
+  background: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.cross-circle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  position: relative;
+}
+
+.cross-circle::before,
+.cross-circle::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #666;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross-circle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
